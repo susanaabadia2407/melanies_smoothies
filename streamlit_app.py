@@ -18,7 +18,6 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = cnx.query("select SEARCH_ON FROM smoothies.public.fruit_options")
 pf_df = st.dataframe(my_dataframe)
-st.dataframe(pf_df)
 st.stop()
 #my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
