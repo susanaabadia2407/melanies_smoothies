@@ -17,7 +17,7 @@ st.write('The name on your smoothie will be: ' +name_on_order)
 cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = cnx.query("select FRUIT_NAME,  SEARCH_ON FROM smoothies.public.fruit_options")
-pf_df = st.dataframe(my_dataframe)
+pd_df = my_dataframe 
 #st.stop()
 #my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
